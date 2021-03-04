@@ -3,7 +3,7 @@
     <h1 class="title">メモアプリ</h1>
     <div class=memo-component>
       <div class=memo-index>
-        <li v-for="(memo) in memos" :key="memo.key">
+        <li v-for="(memo) in memos" :key="memo">
           <a href="#" @click="editMemo(memo)">{{memo.oneLine}}</a>
         </li>
 
