@@ -48,7 +48,7 @@
         this.memos.push({
           id: uuid,
           content: this.memoValue,
-          oneLine: this.memoValue.split(/\r\n|\r|\n/)[0]
+          oneLine: this.setOneLine
         })
       } else {
         const num = this.memos.findIndex(item => item.id === this.memoState)
