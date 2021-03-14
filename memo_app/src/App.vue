@@ -53,14 +53,13 @@
       } else {
         const num = this.memos.findIndex(item => item.id === this.memoState)
         this.memos[num].content = this.memoValue
-        this.memos[num].oneLine = this.memoValue.split(/\r\n|\r|\n/)[0]
+        this.memos[num].oneLine = this.setOneLine
       }
       this.memoValue = ''
       this.memoState = 'new'
       this.saveMemo()
     },
     deleteMemo () {
-      
       const num = this.memos.findIndex(item => item.id === this.memoState)
       console.log(num)
       this.memos.splice(num, 1)
@@ -81,6 +80,11 @@
   },
   mounted: function () {
     this.loadMemos()
+  },
+  computed: {
+    setOneLine: function(){
+      return this.memoValue.split(/\r\n|\r|\n/)[0]
+    }
   }
 }
 </script>
