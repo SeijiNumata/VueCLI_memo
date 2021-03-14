@@ -33,7 +33,7 @@
     addNewMemo () {
       this.memoState = 'new'
       this.newMemo = ''
-      this.memoValue=''
+      this.memoValue = ''
     },
     editMemo (memo) {
       this.memoValue = memo.content
@@ -82,7 +82,7 @@
     this.loadMemos()
   },
   computed: {
-    setOneLine: function(){
+    setOneLine: function () {
       return this.memoValue.split(/\r\n|\r|\n/)[0]
     }
   }
