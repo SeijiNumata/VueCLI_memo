@@ -61,9 +61,7 @@
     },
     deleteMemo () {
       const num = this.memos.findIndex(item => item.id === this.memoState)
-      console.log(num)
       this.memos.splice(num, 1)
-      console.log(this.memos)
       this.memoValue = ''
       this.memoState = 'new'
       this.saveMemo()
